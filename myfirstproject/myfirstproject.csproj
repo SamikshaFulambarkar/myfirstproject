@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <StartupObject>myfirstproject.OOPSClass.Box</StartupObject>
+	 </PropertyGroup>
+
+</Project>
