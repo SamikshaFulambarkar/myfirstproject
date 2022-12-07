@@ -159,11 +159,9 @@ namespace myfirstproject.ArithematicPrograms
     {
         static void Main(string[] args)
         {
-            double a, b, c, d, result;
+            double a, b, result;
             a = 25.5;
             b = 3.5;
-            c = 40.5;
-            d = 4.5;
             result = ((a * b - b * b) / (40.5 - 4.5));
             Console.WriteLine("Expression=" + result);
         }

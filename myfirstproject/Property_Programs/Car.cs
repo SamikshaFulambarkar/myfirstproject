@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace myfirstproject.OOPSClass
+namespace myfirstproject.Property_Programs
 {
     class Car
     {
