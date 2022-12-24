@@ -915,6 +915,103 @@ namespace myfirstproject.ArrProgramMethod
             }
         }
     }
+    class ArrReverseDemo
+    {
+        static void Main(string[] args)
+        {
+            int[] a = { 1, 2, 3, 4, 5 };
+            Console.WriteLine(string.Join(" ",a));
+            int j = a.Length - 1;
+            for(int i=0; i<a.Length/2; i++)
+            {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+                j--;
+            }
+            Console.WriteLine(string.Join(" ",a));
+        }
+    }
+    class ArrWithoutDuplicate
+    {
+        static void Main(string[] args)
+        {
+            int[] a = { 1, 3, 4, 3, 6, 8 };
+            for(int i=0; i<a.Length; i++)
+            {
+                int count = 1;
+                bool isvisited = false;
+                for(int k=i-1; k>=0; k--)
+                {
+                    if(a[i]==a[k])
+                    {
+                        isvisited = true;
+                        break;
+                    }
+                }
+                if(isvisited==false)
+                {
+                    for(int j=i+1; j<a.Length; j++)
+                    {
+                        if(a[i]==a[j])
+                        {
+                            count++;
+                        }
+                    }
+                    Console.WriteLine(a[i]+"   "+count);
+                }
+            }
+        }
+    }
+    class ArrMergeTwo
+    {
+        static void Main(string[] args)
+        {
+            int[] a = { 1, 3, 3, 4 };
+            int[] b = { 2, 6, 4, 5 };
+            int[] c = new int[a.Length + b.Length];
+            int k = 0;
+            for(int i=0; i<a.Length; i++)
+            {
+                bool isvisted = false;
+                for(int p=k; p>=0; p--)
+                {
+                    if(a[i]==c[p])
+                    {
+                        isvisted = true;
+                        break;
+                    }
+                }
+                if(isvisted==false)
+                {
+                    c[k] = a[i];
+                    k++;
+                }
+            }
+            for (int i = 0; i < b.Length; i++)
+            {
+                bool isvisted = false;
+                for (int p = k; p >= 0; p--)
+                {
+                    if (b[i] == c[p])
+                    {
+                        isvisted = true;
+                        break;
+                    }
+                }
+                if (isvisted == false)
+                {
+                    c[k] = b[i];
+                    k++;
+                }
+            }
+            Console.WriteLine("Merge Array is:");
+            for(int i=0; i<c.Length; i++)
+            {
+                Console.Write(c[i]+" ");
+            }
+        }
+    }
 }
     
 

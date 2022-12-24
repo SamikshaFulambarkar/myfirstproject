@@ -73,7 +73,7 @@ namespace myfirstproject.ArithematicPrograms
             int factorial=1;
             for (int i = 1; i <= num; i++)
             {
-                factorial = factorial * 1;
+                factorial = factorial * i;
             }
             Console.WriteLine(factorial);
         }
