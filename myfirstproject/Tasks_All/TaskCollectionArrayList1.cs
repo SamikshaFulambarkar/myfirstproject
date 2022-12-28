@@ -186,19 +186,30 @@ namespace myfirstproject.Tasks_All
     {
         static void Main(string[] args)
         {
-            ArrayList al = new ArrayList();
-            al.Add("Goa");
-            al.Add("Pune");
-            al.Add("Nashik");
-            al.Add("Aurangabad");
-            al.Add("Chennai");
-            al.Add("Hyderabad");
-            al.Add("Maisore");
-            al.Sort();
-            foreach (var x in al)
+            List<string> li = new List<string>();
+            Console.WriteLine("Enter size of List :");
+            int s = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the elements in list :");
+            for (int i = 1; i <= s; i++)
             {
-                Console.Write(x + " ");
+                string str = Console.ReadLine();
+                li.Add(str);
             }
+            li.ForEach(Lnum => Console.Write(Lnum + " "));
+            for (int i = 0; i < li.Count; i++)
+            {
+                for (int j = i + 1; j < li.Count; j++)
+                {
+                    if (li[i].CompareTo(li[j]) > -1)
+                    {
+                        var temp = li[i];
+                        li[i] = li[j];
+                        li[j] = temp;
+                    }
+                }
+            }
+            Console.WriteLine();
+            li.ForEach(Lnum => Console.Write(Lnum + " "));
         }
     }
     class TaskCollectionList10 : IComparable

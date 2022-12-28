@@ -8,6 +8,11 @@ namespace myfirstproject
         {
             Console.WriteLine("Hello World!");
         }
+
+        internal void Sum(float v1, float v2)
+        {
+            throw new NotImplementedException();
+        }
     }
     class OperatorUsed
     {
